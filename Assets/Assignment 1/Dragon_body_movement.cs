@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawningStuff : MonoBehaviour
+public class Dragon_body_movement : MonoBehaviour
 {
-    public GameObject prefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +14,5 @@ public class SpawningStuff : MonoBehaviour
     void Update()
     {
         
-    } 
+    }
 }
