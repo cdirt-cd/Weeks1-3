@@ -18,5 +18,6 @@ public class Chaser_script : MonoBehaviour
         Vector3 mousePositionInWorldSpace = gameCamera.ScreenToWorldPoint(Input.mousePosition);
         mousePositionInWorldSpace.z = 0f;
         transform.position = mousePositionInWorldSpace;
+
     }
 }
