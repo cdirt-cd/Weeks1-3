@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Triangle_rotation : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Camera gameCamera;
     void Start()
     {
    
@@ -13,10 +13,20 @@ public class Triangle_rotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 newRotation = transform.eulerAngles + Vector3.forward * 1f;
-        newRotation.z += 1f;
-        newRotation.x += 1f;
-        newRotation.y += 1f;
-        transform.eulerAngles = newRotation;
+        //Vector3 newRotation = transform.eulerAngles + Vector3.forward * 1f;
+        //newRotation.z += 1f;
+        //newRotation.x += 1f;
+        //newRotation.y += 1f;
+        Vector3 mousePositionInWorldSpace = gameCamera.ScreenToWorldPoint(Input.mousePosition);
+        mousePositionInWorldSpace.z = 0f;
+
+        Vector3 start = transform.position;
+        Vector3 target = mousePositionInWorldSpace;
+
+        Vector3 direction = target - start;
+
+        transform.up = direction;
+
+        //transform.eulerAngles = newRotation;
     }
 }
