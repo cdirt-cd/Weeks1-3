@@ -55,10 +55,12 @@ public class Chaser : MonoBehaviour
         //change the colour of the chaser to red
 
         bool xMaxExceeded = chaserPositionInScreenSpace.x >= xMax;
+        bool notLessThanXMin = chaserPositionInScreenSpace.x <= xMin;
 
-        bool xMinExceeded = chaserPositionInScreenSpace.x <= xMin;
+        Debug.Log("xMaxExceeded = " + xMaxExceeded.ToString());
+        Debug.Log("xMinExceeded = " + notLessThanXMin.ToString());
 
-        if (xMaxExceeded || xMinExceeded ) ;
+        if (xMaxExceeded || notLessThanXMin) 
         {
             chserRenderer.color = Color.red;
         }
@@ -70,8 +72,7 @@ public class Chaser : MonoBehaviour
 
 
 
-        Debug.Log("xMaxExceeded = " + xMaxExceeded.ToString());
-        Debug.Log("xMinExceeded = " + xMinExceeded.ToString());
+        
 
     }
 }
