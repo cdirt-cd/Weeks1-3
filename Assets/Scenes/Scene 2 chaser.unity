@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1349690897}
   - component: {fileID: 1349690896}
-  - component: {fileID: 1349690895}
+  - component: {fileID: 1349690898}
   m_Layer: 0
   m_Name: Chaser
   m_TagString: Untagged
@@ -140,18 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1349690895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349690894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 713d587a2a48ffd4a86867a3aba4adff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1349690896
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -219,6 +207,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1349690898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349690894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f2703ffd65a4940a65a22b342e193a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newPosition: {x: 3, y: 2, z: 1}
+  gameCamera: {fileID: 1426890867}
 --- !u!1 &1426890865
 GameObject:
   m_ObjectHideFlags: 0
