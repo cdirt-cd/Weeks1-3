@@ -6,6 +6,9 @@ public class Chaser_script : MonoBehaviour
 {
     public Vector3 newPosition;
     public Camera gameCamera;
+    public float speed;
+
+
     void Start()
     {
         
@@ -24,7 +27,7 @@ public class Chaser_script : MonoBehaviour
         Vector3 target = mousePositionInWorldSpace;
         Vector3 directionToMove = target - start;
 
-        transform.position = transform.position + directionToMove;
+        transform.position = transform.position + directionToMove * speed;
 
     }
 }
