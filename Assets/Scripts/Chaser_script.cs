@@ -6,6 +6,9 @@ public class Chaser : MonoBehaviour
 {
     public Vector3 newPosition;
     public Camera gameCamera;
+    public SpriteRenderer chserRenderer;
+
+
     public float speed;
     Vector3 lastClickedPosition = Vector3.zero;
 
@@ -36,12 +39,13 @@ public class Chaser : MonoBehaviour
         transform.position = transform.position + directionToMove * speed;
 
         Vector3 chaserPositionInScreenSpace = gameCamera.WorldToScreenPoint(transform.position);
+        //Debug.Log("Chaser position in ScreenSpace = " + chaserPositionInScreenSpace.ToString());
 
         float xMin = 0f;
-        float yMin = 0f;
+        //float yMin = 0f;
         
         float xMax = Screen.width;
-        float yMax = Screen.height;
+        //float yMax = Screen.height;
 
         //If chaser x is less than the xmin
         //If chaser y is less than the ymin
@@ -50,7 +54,24 @@ public class Chaser : MonoBehaviour
         //THEN:
         //change the colour of the chaser to red
 
+        bool xMaxExceeded = chaserPositionInScreenSpace.x >= xMax;
 
+        bool xMinExceeded = chaserPositionInScreenSpace.x <= xMin;
+
+        if (xMaxExceeded || xMinExceeded ) ;
+        {
+            chserRenderer.color = Color.red;
+        }
+        else
+        {
+            chserRenderer.color = Color.white;
+        }
+
+
+
+
+        Debug.Log("xMaxExceeded = " + xMaxExceeded.ToString());
+        Debug.Log("xMinExceeded = " + xMinExceeded.ToString());
 
     }
 }
