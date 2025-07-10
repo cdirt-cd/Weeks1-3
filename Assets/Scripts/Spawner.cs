@@ -19,11 +19,19 @@ public class Spawner : MonoBehaviour
 
         //spawnedObjects { }
 
-        GameObject spawnedObject = Instantiate(spawningPrefab);
-        spawnedObjects.Add(spawnedObject);
-        GameObject spawnedObject2 = Instantiate(spawningPrefab, transform.position, Quaternion.identity);
-        spawnedObjects.Add(spawnedObject2);
+        //GameObject spawnedObject = Instantiate(spawningPrefab);
+        //spawnedObjects.Add(spawnedObject);
+        //GameObject spawnedObject2 = Instantiate(spawningPrefab, transform.position, Quaternion.identity);
+        //spawnedObjects.Add(spawnedObject2);
 
+        //spawnedObject.Insert(2, spawnedObject); insert new object
+
+        //spawnedObjects[0] = spawnedObject2; replaces object at index 0 with spawnedObject2
+
+        //to clear the whole list spawnedObjects.Clear(); doesn't destroy the objects, just clears the list
+
+
+        Destroy(spawnedObjects[0])
         //spawnedObjects {spawnedObject, spawnedObject2 }
     }
 
