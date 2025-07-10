@@ -31,13 +31,25 @@ public class Spawner : MonoBehaviour
         //to clear the whole list spawnedObjects.Clear(); doesn't destroy the objects, just clears the list
 
 
-        Destroy(spawnedObjects[0])
+        //Destroy(spawnedObjects[0])
         //spawnedObjects {spawnedObject, spawnedObject2 }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetMouseButtonDown(1))
+        {
+            for (int i = 0; i < spawnedObjects.Count; i++)
+            {
+                Destroy(spawnedObjects[i]);
+            }
+            spawnedObjects.Clear();
+        }
+
+
+        //spawnedObject.Add(Instantiate(spawningPrefab) 
+
     }
+}
 }
