@@ -8,6 +8,7 @@ public class TimeSpawner : MonoBehaviour
     public float spawnFrequency;
 
     private float timeSinceLastSpawn = 0f;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,8 @@ public class TimeSpawner : MonoBehaviour
     void Update()
     {
         timeSinceLastSpawn += Time.deltaTime;
+        
+
         Debug.Log("Time since last spawn: " + timeSinceLastSpawn);
 
         if (timeSinceLastSpawn > spawnFrequency)
@@ -26,5 +29,7 @@ public class TimeSpawner : MonoBehaviour
             Instantiate(spawningPrefab);
             timeSinceLastSpawn = 0f;
         }
+
+
     }
 }
