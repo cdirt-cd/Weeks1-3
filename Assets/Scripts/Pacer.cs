@@ -19,8 +19,8 @@ public class Pacer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.right * speed * direction;
-        
+        transform.position += Vector3.right * speed * direction * Time.deltaTime;
+
         Vector3 pacerPositionInScreenSpace = Camera.main.WorldToScreenPoint(transform.position);
 
         if (pacerPositionInScreenSpace.x > Screen.width)

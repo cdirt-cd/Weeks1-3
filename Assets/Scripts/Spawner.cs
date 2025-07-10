@@ -9,14 +9,15 @@ public class Spawner : MonoBehaviour
 
     public GameObject spawningPrefab;
     public Vector3 spawnPoint;
+    public int framerate;
 
-     List<GameObject> spawnedObjects = new List<GameObject>();
+    List<GameObject> spawnedObjects = new List<GameObject>();
     //List<int> numbers = new List<int>();
 
     // Start is called before the first frame update
     void Start()
     {
-
+        Application.targetFrameRate = framerate;
         //spawnedObjects { }
 
         //GameObject spawnedObject = Instantiate(spawningPrefab);
@@ -45,6 +46,14 @@ public class Spawner : MonoBehaviour
                 Destroy(spawnedObjects[i]);
             }
             spawnedObjects.Clear();
+
+
+            //foreach(GameObject spawnedObject in spawnedObjects)
+            // {
+            //     Destroy(spawnedObjects[i]);
+            // }
+
+
         }
 
 
