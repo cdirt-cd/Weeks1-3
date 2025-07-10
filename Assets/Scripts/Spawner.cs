@@ -13,9 +13,11 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(spawningPrefab);
-        Instantiate(spawningPrefab, transform.position, Quaternion.identity);
-        Destroy (gameObject, 3);
+
+        Gameobject spawnedObject = Instantiate(spawningPrefab);
+        Destroy(spawnedObject);
+        Gameobject spawnedObject2 = Instantiate(spawningPrefab, transform.position, Quaternion.identity);
+        Destroy(spawnedObject2, 3);
     }
 
     // Update is called once per frame
